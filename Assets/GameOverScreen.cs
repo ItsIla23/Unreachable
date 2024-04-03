@@ -12,14 +12,16 @@ public class GameOverScreen : MonoBehaviour
     // Metodo per impostare e aggiornare la schermata di game over
     public void Setup()
     {
+
+        
         // Mostra la schermata di game over
         gameObject.SetActive(true);
 
         // Ottieni il punteggio dallo ScoreManager
-        float score = scoreManager.score;
+        float score = FindObjectOfType<ScoreManager>().score;
 
         // Mostra il punteggio nella schermata di game over
-        pointsText.text = "Score: " + score.ToString() + "m";
+        pointsText.text = "Score: " + score.ToString() + " m";
     }
 
     // Metodo chiamato quando la schermata di game over viene attivata
